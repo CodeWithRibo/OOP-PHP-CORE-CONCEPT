@@ -5,21 +5,14 @@ class Book
     public $title;
     public $author;
     public $price;
-    public $weight; #physical book
-    public $fileSize; #digital book 
-
     public function __construct(
         string $title, 
         string $author, 
-        int $price, 
-        int $weight = 0, 
-        int $fileSize = 0)
+        int $price)
     {
         $this->title = $title;
         $this->author = $author;
         $this->price = $price;
-        $this->weight = $weight;
-        $this->fileSize = $fileSize;
     }
 
     public function getTitle(): string
@@ -37,14 +30,4 @@ class Book
         return $this->price;
     }
 
-    public function getWeight(): int
-    {
-        return $this->weight;
-    }
-
-    public function getFileSize(): int
-    {
-        return $this->fileSize;
-    }
 }
-
