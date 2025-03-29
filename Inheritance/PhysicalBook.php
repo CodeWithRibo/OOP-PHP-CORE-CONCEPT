@@ -7,12 +7,12 @@ class PhysicalBook extends Book
 
     public function __construct(string $title, string $author, float $price, int $weight)  //extend the parent parameter and add weight
     {
-        parent::__construct(title: $title, author: $author, price: $price ); //call the parent constructor inside the subclass constructor to set a value
+        Book::__construct(title: $title, author: $author, price: $price ); //call the parent constructor inside the subclass constructor to set a value
         $this -> weight = $weight; 
     }
 
     #display the details of the parent and subclass 
-    public function displayDetails(): string 
+    public function displayDetails(): string
     {
         $title = $this -> getTitle();
         $author = $this -> getAuthor(); 
