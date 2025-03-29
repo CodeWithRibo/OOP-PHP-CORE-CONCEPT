@@ -2,13 +2,27 @@
 
 class ExampleStatic
 {
-    public static $name = "Ribo"; //Declare static for property
+    public static $firstName = "Ribo"; //Declare static for property
+    public $lastName = "Luna"; //non-static
 
-    public static function displayName()  //static for method
+    public static function displayFirstName()  //static  method
     {
-        return self::$name;
+        return self::$firstName;
     }
+
+    public function displayLastName() //non-static method
+    {
+        return $this->lastName;
+    }
+
+
 }
 
 #declared static keyword to access via Class Name (ExampleStatic)
-echo ExampleStatic::displayName();
+echo ExampleStatic::displayFirstName();
+
+
+#non-static accessing using instance (object) 
+$exampleStaticObj = new ExampleStatic();
+
+echo $exampleStaticObj->displayLastName();
