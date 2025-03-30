@@ -11,6 +11,11 @@ class PhysicalBook extends Book
         $this -> weight = $weight; 
     }
 
+    public function getAuthor(): string
+    {
+        return 'Hi! ' . parent::getAuthor();
+    }
+
     #display the details of the parent and subclass 
     public function displayDetails(): string
     {
