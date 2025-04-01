@@ -26,7 +26,7 @@ abstract class SystemUnit
     }
 }
 
-class Cpu extends SystemUnit
+class CentralProcessingUnit extends SystemUnit
 {
     public function Type(): string
     {
@@ -34,5 +34,5 @@ class Cpu extends SystemUnit
     }
 }
 
-$obj = new Cpu(name: 'Intel', generation: 'Core I7');
+$obj = new CentralProcessingUnit(name: 'Intel', generation: 'Core I7');
 echo $obj->Type();
