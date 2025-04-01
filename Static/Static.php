@@ -1,20 +1,14 @@
 <?php
 
-class Animal {
-    protected static $sound = "Generic animal sound";
+class Connection
+{
+    public static int $count = 0;
 
-    public static function describe() {
-        return "This is a " . static::class . " making a sound: " . static::$sound;
+    public function __construct()
+    {
+        self::$count++;
     }
 }
 
-class Dog extends Animal {
-    protected static $sound = "Woof woof";
-}
-
-class Cat extends Animal {
-    protected static $sound = "Meow meow";
-}
-
-echo Dog::describe() . PHP_EOL; // Outputs: This is a Dog making a sound: Woof woof
-echo Cat::describe(); // Outputs: This is a Cat making a sound: Meow meow
+new Connection();
+echo Connection::$count; 

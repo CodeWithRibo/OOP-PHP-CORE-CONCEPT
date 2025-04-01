@@ -10,7 +10,7 @@ class Animal
     protected static $nameCat;
 
     #set the value of properties from the parameter of constructor
-    public function __construct(string $dog, string $cat) 
+    public function __construct(string $dog, string $cat)
     {
         self::$nameDog = $dog;
         self::$nameCat = $cat;
