@@ -43,7 +43,3 @@ class Cpu extends SystemComponents
     }
 }
 
-$obj = new Cpu(type: 'Coffee Lake Architecture', capacity: 9, speed: 2.8, cores: 8, threads: 8, processor: 'Intel i5-8400', IntegratedGPU: 'UHD Graphics 630');
-
-echo $obj->getDetails() . PHP_EOL;
-echo $obj->getStatus();

@@ -1,5 +1,4 @@
 <?php
-
 #Parent Class with implementing Abstract
 abstract class SystemComponents
 {
@@ -14,7 +13,7 @@ abstract class SystemComponents
     protected static $status = 'Still processing';
 
     #set a value property from a parameter
-    public function __construct(string $type, int $capacity, float $speed = 0)
+    public function __construct(string $type, int $capacity, float $speed)
     {
         $this -> type = $type;
         $this -> capacity = $capacity;
